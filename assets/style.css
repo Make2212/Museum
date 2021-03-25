@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap');
+
 body {
     margin: 0;
     padding: 0;
-    background-color: #202020;
+    background-color: #333;
 }
 
 .greeting {
@@ -9,12 +11,50 @@ body {
     z-index: 2;
 }
 
-.greet-text {
+.present {
     color: #fff;
-    font-size: 20px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
     position: absolute;
+    opacity: 0;
     left: 50%;
-    top: 30%;
-    transform: translate(-50%, -30%);
+    top: 45%;
+    transform: translate(-50%, -50%);
+    animation-name: fade-in-out;
+    animation-duration: 4s;
 }
 
+.name {
+    color: #fff;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    opacity: 0;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%, 30%);
+    animation-name: fade-in;
+    animation-delay: 4s;
+    animation-duration: 10s;
+}
+
+@keyframes fade-in-out {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
